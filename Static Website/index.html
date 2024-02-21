@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+</head>
+<body>
+    <main class="page-container">
+        <section class="header" title="Navigation">
+          <div class="logo">getmegirlfriend.com</div>
+          <div class="navigation">
+            <nav>
+              <ul>
+                <li>
+                  <a href="#">Quality</a>
+                </li>
+                <li>
+                  <a href="#">Gallery</a>
+                </li>
+                <li>
+                  <a href="#">Why i am single?</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+        <!-- End of Navigation -->
+
+        <section class="hero-section-container" title="Hero section">
+          <div>
+            <h1>Looking for Girlfriend?</h1>
+            <p>Search no more! Meet Srijana 😍</p>
+            <button id="send-proposal-btn">Send proposal</button>
+          </div>
+          <div>
+            <div>
+              <img src="./static/images/hero-srijana.png" />
+            </div>
+          </div>
+        </section>
+        <!-- End of hero section -->
+
+        <section class="top-section" title="Top Features">
+          <h1>Top Quality</h1>
+          <div class="quality-wrapper">
+            <div class="quality-card">
+              <div class="icon">
+                <img src="./static/images/mdi_heart.png" alt="">
+              </div>
+              <h1>Heart of Gold</h1>
+              <p>
+                Srijana's kindness knows no bounds. She's always there to lend a
+                helping hand, offer a listening ear, or share a comforting hug
+                when you need it most.
+              </p>
+            </div>
+            <div class="quality-card">
+              <div class="icon"><img src="./static/images/lucide_laugh.png" alt=""></div>
+              <h1>Good Sense Of Humor</h1>
+              <p>
+                Laughter is the best medicine, and with Srijana, you'll never be
+                short of it. Her witty jokes and infectious laughter can turn
+                any ordinary day into an adventure.
+              </p>
+            </div>
+            <div class="quality-card">
+              <div class="icon"><img src="./static/images/Vector.png" alt=""></div>
+              <h1>Loyality</h1>
+              <p>
+                When you're with Srijana, you have a friend for life. She's fiercely 
+                loyal and committed to those she cares about, standing by your side
+                through thick and thin.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- End of top Quality section -->
+
+        <section class="feature-photo" title="Feature Photo">
+          <h1>Feature Photo</h1>
+          <div class="proposal-photos">
+            <div class="grid-container">
+              <div class="grid-item">
+                <img src="./static/images/photo1.jpg" alt="Proposal Photo 1">
+                <img src="./static/images/photo2.jpg" alt="Proposal Photo 2">
+              </div>
+              <div class="grid-item">
+                <img src="./static/images/photo5.jpg" alt="Proposal Photo 3">
+                <img src="./static/images/photo4.jpg" alt="Proposal Photo 4">
+              </div>
+              <div class="grid-item">
+                <img src="./static/images/photo3.jpg" alt="Proposal Photo 5">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End of Feature photo section -->
+
+        <section title="Proposal form">
+          <div class="form-container">
+            <div class="form-left-container">
+              <p>Send proposal Before she is</p>
+              <h1>Booked!</h1>
+            </div>
+            <div class="form-right-container">
+              <form action="" id="proposal-form">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Phone Number">
+                <button>Send Proposal</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- End of proposal form section -->
+  
+        <section title="Footer">
+          <div class="footer-container">
+            <div>
+              <h1>Get me girlfriend</h1>
+            </div>
+
+            <div>
+              <nav>
+                <ul>
+                  <li>
+                    <a href="">Blog</a>
+                  </li>
+                  <li>
+                    <a href="">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="">Copyright@2024</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </section>
+        <!-- End of Footer -->
+      </main>
+    <script>
+        // function ChangeTheme(){
+        //     var currentColor = document.documentElement.style.getPropertyValue('--primary-bg-color');
+        // var originalColor = 'var(--original-primary-bg-color)';
+        
+        // if (currentColor === originalColor) {
+        //     // If current color is original color, change to new color
+        //     document.documentElement.style.setProperty('--primary-bg-color', 'black');
+        //     document.documentElement.style.setProperty('--primary-color', 'white');
+        // } else {
+        //     // If current color is not original color, revert to original color
+        //     document.documentElement.style.setProperty('--primary-bg-color', originalColor);
+        //     document.documentElement.style.setProperty('--primary-color', 'var(--original-primary-color)');
+        // }
+        // }
+        
+        document.getElementById("send-proposal-btn").addEventListener("click", function() {
+            document.getElementById("proposal-form").querySelector("input[type='text']").focus();
+        });
+    </script>
+    
+</body>
+</html>
