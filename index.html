@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./static/css/index.css">
 
 </head>
@@ -20,13 +19,13 @@
             <nav>
               <ul>
                 <li>
-                  <a href="#">Quality</a>
+                  <a href="#quality">Quality</a>
                 </li>
                 <li>
-                  <a href="#">Gallery</a>
+                  <a href="#photos">Gallery</a>
                 </li>
                 <li>
-                  <a href="#">Why i am single?</a>
+                  <a href="#single">Why i am single?</a>
                 </li>
               </ul>
             </nav>
@@ -48,7 +47,7 @@
         </section>
         <!-- End of hero section -->
 
-        <section class="top-section" title="Top Features">
+        <section id="quality" class="top-section" title="Top Features">
           <h1>Top Quality</h1>
           <div class="quality-wrapper">
             <div class="quality-card">
@@ -84,7 +83,7 @@
         </section>
         <!-- End of top Quality section -->
 
-        <section class="feature-photo" title="Feature Photo">
+        <section id="photos" class="feature-photo" title="Feature Photo">
           <h1>Feature Photo</h1>
           <div class="proposal-photos">
             <div class="grid-container">
@@ -104,18 +103,19 @@
         </section>
         <!-- End of Feature photo section -->
 
-        <section title="Proposal form">
+        <section id="single" title="Proposal form">
           <div class="form-container">
             <div class="form-left-container">
               <p>Send proposal Before she is</p>
               <h1>Booked!</h1>
             </div>
             <div class="form-right-container">
-              <form action="" id="proposal-form">
-                <input type="text" placeholder="Full Name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Phone Number">
-                <button>Send Proposal</button>
+              <form action="https://formspree.io/f/xoqgwaqp"  method="post" id="proposal-form">
+                <input type="text" name="name"   placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="phone" name="phone" placeholder="Phone Number" required>
+                <textarea placeholder="Your Message" name="message" id="text" cols="30" rows="10"></textarea>
+                <button type="submit">Send Proposal</button>
               </form>
             </div>
           </div>
@@ -163,10 +163,31 @@
         // }
         // }
         
-        document.getElementById("send-proposal-btn").addEventListener("click", function() {
-            document.getElementById("proposal-form").querySelector("input[type='text']").focus();
-        });
-    </script>
-    
+      document.getElementById("send-proposal-btn").addEventListener("click", function() {
+      document.getElementById("proposal-form").querySelector("input[type='text']").focus();
+
+      document.getElementById('proposal-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+        var name = document.getElementsByName('name')[0].value;
+        var email = document.getElementsByName('email')[0].value;
+        var phone = document.getElementsByName('phone')[0].value;
+        var message = document.getElementsByName('message')[0].value;
+
+      var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if(!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+       var phoneRegex = /^\+977[0-9]{9}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid Nepal phone number (e.g., +977XXXXXXXXXX).');
+      return;
+      }
+      alert('Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nMessage: ' + message);
+      });
+      });
+   </script>
 </body>
 </html>
